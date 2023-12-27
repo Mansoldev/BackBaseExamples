@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset='utf-8' />
+<title>Formulario html5</title>
+<body>
+
+<form name="formulario" method="POST" 
+action="http://www.institutos.es/para.php">
+
+Teléfono  sólo acepta 9 dígitos: <input type="tel" name="telefono1" 
+pattern="[0-9]{9}" title="Debes teclear 9 dígitos para el teléfono."/><br />
+
+Texto que acepte Hola o hola: <input type="text" name="texto1" pattern="[Hh]ola" /><br />
+Texto que acepte cuatro caracteres: <input type="text" name="texto2" pattern="...." /><br />
+<!-- el anterior obliga a teclear cuatro caracteres -->
+Texto: <input type="text" name="texto3" pattern="123?" /><br />
+<!-- debe ir 12 y el 3 puede ir o no -->
+Texto: <input type="text" name="texto4" pattern="123+" /><br />
+<!-- debe ir 123 y el 3 se puede repetir -->
+Texto: <input type="text" name="texto5" pattern="123*" /><br />
+<!-- debe ir 12 y el 3 puede ir 0 o muchas veces -->
+Texto: <input type="text" name="texto6" pattern="[a-z]*" /><br />
+<!-- cualquier conjunto de minúsculas -->
+Texto: <input type="text" name="texto7" pattern="[a-zA-Z]*" /><br />
+<!-- cualquier conjunto de minúsculas y mayúsculas -->
+Texto: <input type="text" name="texto8" pattern="[0-9]*" /><br />
+<!-- cualquier conjunto de digitos numéricos -->
+Código: <input type="text" name="texto9" pattern="[0-9]{5}" /><br />
+<!-- formado por 5 dígitos numéricos -->
+Código: <input type="text" name="texto10" pattern="[0-9]{3,5}" /><br />
+<!-- formado por 3, 4 o 5 dígitos numéricos -->
+DNI: <input type="text" name="texto11" pattern="[0-9]{7,8}[a-zA-Z]" /><br />
+<!-- formado por 3, 4 o 5 dígitos numéricos -->
+Colores:<input type="text" name="texto12" pattern="(Rojo|Verde|Azul)" /><br />
+<input type="submit" name="boton" value="Enviar" />
+</form>
+</body>
+</html>

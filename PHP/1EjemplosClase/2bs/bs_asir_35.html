@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- Para los dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejemplo 35. Alertas.</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap3/css/bootstrap.min.css" rel="stylesheet">
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="bootstrap3/js/jquery2.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap3/js/bootstrap.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+  <style>
+	body{padding-bottom: 70px;} <!-- Hay que hacer un padding para que no se tape la parte inferior de los contenidos. La barra es de 50px -->
+  </style>	
+  
+  </head>
+  <body>
+	<div class="container">
+		<div class="page-header">
+			<h1>Contenedores destacados.</h1>
+			<h3>Alertas.</h3>
+		</div>
+		
+		<div class="alert alert-success">Bien, todo correcto. alert-success</div> 
+		<div class="alert alert-info">Mensaje informativo. alert-info</div> 
+		<div class="alert alert-warning">Cuidado, debe tener en cuenta ..... alert-warning</div> 
+		<div class="alert alert-danger">Error, no puede estar aquí. alert-danger</div>
+		
+		<div>
+			<h3>Añadiendo cosas</h3>
+		</div>
+		
+		<!-- &times; se muestra como la X para cerrar las ventanas. Además debemos incluir en el botón el atributo data-dismiss="alert" -->
+		<div class="alert alert-success alert-dismissable">Bien, todo correcto. alert-success
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+		</div> 
+		<div class="alert alert-info alert-dismissable">Mensaje informativo. alert-info
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+		</div> 
+		<div class="alert alert-warning alert-dismissable">Cuidado, debe tener en cuenta ..... alert-warning
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+		</div> 
+		<div class="alert alert-danger alert-dismissable">Error, no puede estar aquí. alert-danger
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+		</div>
+		
+		
+	</div>
+
+  </body>
+</html>

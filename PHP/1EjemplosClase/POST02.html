@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+</head>
+<body>
+<h2>CALCULADORA</h2>
+<form name="formulario" method="post" action="procPOST02.php">
+OPERANDO 1:<input type="number" name="op1"/><br/>
+OPERANDO 2:<input type="number" name="op2"/><br/><br/>
+OPERACIÓN:<input type="text" list="operacion" name="op"/>
+<datalist id="operacion">
+	<option value="SUMA">SUMA</option>
+	<option value="RESTA">RESTA</option>
+	<option value="MULTIPLICA">MULTIPLICACION</option>
+	<option value="DIVIDE">DIVISION</option>
+</datalist><br/><br/>
+<input type="submit" value="CALCULAR"/>
+<input type="reset" value="LIMPIAR" />
+</form>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- Para los dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejemplo 25. Grupos de botones .</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap3/css/bootstrap.min.css" rel="stylesheet">
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="bootstrap3/js/jquery2.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap3/js/bootstrap.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+  </head>
+  <body>
+	<div class="container">
+		<div class="banner">
+			<h1>Grupos de botones UP.</h1>
+			<h3>Clase dropup.</h3>
+		</div>
+		<div><h3>En este ejemplo los menús se despliegan hacia arriba.</h3>
+		</div>
+		<div class="btn-group dropup"> <!-- Hay que utilizar la clase btn-group-vertical para poner en vertical el grupo de botones -->
+			<button type="button" class="btn btn-default">Archivar</button>
+			<button type="button" class="btn btn-default">Abrir</button>
+			<button type="button" class="btn btn-default">Cerrar</button>
+			
+			<div class="btn-group"> <!-- dentro del grupo de botones tenemos que crear otro grupo que englobe el botón y la lista de opciones-->
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Editar <span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#">Copiar</a></li>
+					<li><a href="#">Cortar</a></li>
+					<li><a href="#">Pegar</a></li>
+					<li><a href="#">Borrar</a></li>
+				</ul>
+			</div>
+			
+			<button type="button" class="btn btn-default">Cerrar</button>
+			
+			<div class="btn-group"> <!-- dentro del grupo de botones tenemos que crear otro grupo que englobe el botón y la lista de opciones-->
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Texto <span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#">Buscar</a></li>
+					<li><a href="#">Buscar Siguiente</a></li>
+					<li><a href="#">Reemplazar</a></li>
+				</ul>
+			</div>
+			<button type="button" class="btn btn-default">Salir</button>
+			
+		</div>
+		
+		
+		
+	</div>
+
+  </body>
+</html>

@@ -1,0 +1,51 @@
+/* UNICA CLASE DEL PORTFOLIO */
+.alindice		{position:fixed;width:20%;left:50px;top:25px;}
+
+/* CLASES DE SOBREMI */
+.centralSM		{padding-top:100px;}
+.cajaSM			{padding:25px;background-color:#FED0DC;}
+
+/* CLASES PARA LA GALERIA */
+.galemenu		{background-color:#FED0DC;padding:10px;}
+.imagen			{margin-top:20px;margin-left:4%;width:20%;height:200px;
+				background-color:#fff;float:left;}
+.gale 			{padding-bottom:30px;}
+.foter			{padding-bottom:10px;}
+
+/* CLASES PARA LOGIN Y REGISTRO */
+.colorlogin	{background-color:#FED0DC;margin-top:80px;}
+.errores	{padding-top:20px;padding-bottom:20px;}
+.formu		{padding-top:20px;padding-bottom:20px;}
+
+/* CLASES DEL INDEX */
+.fondo			{background-color:#C8ADD9;}
+.navegador		{position:relative;width:70%;height:500px;}
+
+.botones	{padding-top:40px;text-align:center;text-decoration:none;color:black;}
+.boton1		{position:absolute;left:23%;top:200px;
+				width:120px;height:120px;
+				border-radius:100%;
+				background-color:#AAD7D7;}
+.boton2		{position:absolute;left:35%;top:70px;
+				width:120px;height:120px;
+				border-radius:100%;
+				background-color:#D6B5AC;}
+.boton3		{position:absolute;left:55%;top:70px;
+				width:120px;height:120px;
+				border-radius:100%;
+				background-color:#FED0DC;}
+.boton4		{position:absolute;left:67%;top:200px;
+				width:120px;height:120px;
+				border-radius:100%;
+				background-color:#ECDEBB;}
+.botonG		{position:absolute;left:38%;top:198px;
+				width:250px;height:250px;
+				border-radius:100%;
+				background-color:grey;}
+				/*background-image:gray;*/
+
+.indexa		{margin-top:50px;background-color:#FED0DC;width:70%;text-align:center;padding:10px;}
+.indexcentral	{background-color:#FED0DC;padding:10px;}
+.paneles		{padding-top:10px;}
+
+.finentradas	{padding-top:10px;}

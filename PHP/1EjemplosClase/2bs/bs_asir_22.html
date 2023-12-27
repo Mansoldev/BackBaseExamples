@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- Para los dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejemplo 22. Menús desplegables.</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap3/css/bootstrap.min.css" rel="stylesheet">
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="bootstrap3/js/jquery2.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap3/js/bootstrap.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+  </head>
+  <body>
+	<div class="container">
+		<div class="banner">
+			<h1>Menús desplagables.</h1>
+			<h3>Cómo crear  menús desplagables. Clase dropdown.</h3>
+		</div>
+		<!-- div con la clase dropdown, botón con la clase dropdown-toggle y un id único que se colocará en la lista en el atributo aria-labelledby
+		     la lista con ul con clase dropdown-menu y role menu. Cada elemento li lleva el role presentation y el role menuitem y tabindex -1 -->
+		
+		<div class="row">
+		<div class="col-md-1">
+		<div class="dropdown"> 
+			<button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"> Archivo <span class="caret"></span> 
+			</button> 
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1"> 
+				<li role="presentation"> <a role="menuitem" tabindex="-1" href="#">Abrir</a> </li> 
+				<li role="presentation"> <a role="menuitem" tabindex="-1" href="#">Guardar</a> </li> 
+				<li role="presentation"> <a role="menuitem" tabindex="-1" href="#">Guardar otra...</a> </li> 
+				<li role="presentation"> <a role="menuitem" tabindex="-1" href="#">Guardar como... </a> </li> 
+				<li role="presentation" class="divider"></li> 
+				<li role="presentation"> <a role="menuitem" tabindex="-1" href="#">Cerrar</a> </li> 
+			</ul> 
+		</div>
+		</div>
+		
+		<div class="col-md-1">
+		<div class="dropdown"> 
+			<button type="button" class="btn dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown"> Editar <span class="caret"></span> 
+			</button> 
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2"> 
+				<li role="presentation"> <a role="menuitem" tabindex="-1" href="#">Copiar</a> </li> 
+				<li role="presentation"> <a role="menuitem" tabindex="-1" href="#">Cortar</a> </li> 
+				<li role="presentation" class="divider"></li> 
+				<li role="presentation"> <a role="menuitem" tabindex="-1" href="#">Pegar </a> </li> 	
+				<li role="presentation"> <a role="menuitem" tabindex="-1" href="#">Borrar</a> </li> 
+			</ul> 
+		</div>
+		</div>
+		
+		<div class="col-md-1">
+		<div class="dropdown"> 
+			<button type="button" class="btn dropdown-toggle" id="dropdownMenu3" data-toggle="dropdown"> Texto <span class="caret"></span> 
+			</button> 
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu3"> 
+				<li role="presentation"> <a role="menuitem" tabindex="-1" href="http://www.google.es">Google</a> </li> 
+				<li role="presentation"> <a role="menuitem" tabindex="-1" href="http://www.bing.com">Bing</a> </li>  
+				<li role="presentation"> <a role="menuitem" tabindex="-1" href="#">Juan</a> </li> 	
+			</ul> 
+		</div>
+		</div>
+		
+		</div>
+				
+	</div>
+
+  </body>
+</html>

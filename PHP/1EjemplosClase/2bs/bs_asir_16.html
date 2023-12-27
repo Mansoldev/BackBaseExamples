@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- Para los dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejemplo 16. Formularios 2.</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap3/css/bootstrap.min.css" rel="stylesheet">
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="bootstrap3/js/jquery2.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap3/js/bootstrap.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+  </head>
+  <body>
+	<div class="container">
+		<div class="banner">
+			<h1>Ejemplos con Formularios.</h1>
+			<h3>Formulario vertical. Elementos de un formulario.</h3>
+		</div>
+		<form role="form"> 
+			<div class="form-group"> 
+				<label for="nombre">Nombre:</label> 
+				<input type="text" class="form-control" id="nombre" placeholder="Introduce el nombre y los apellidos"> 
+			</div> 
+			
+			<div class="form-group"> 
+				<label for="name">Comentario</label> 
+				<textarea class="form-control" rows="4" placeholder="¿Qué te parece bootstrap?"></textarea> 
+			</div>
+			
+			<div class="form-group"> 
+				<label for="fichero">Selecciona un fichero:</label> 
+				<input type="file" id="fichero"> 				
+			</div> 
+			
+			<div><h3>CheckBox</h3>
+			</div>
+			
+			<div class="checkbox"> 
+				<label> <input type="checkbox" id="op1" value="primera"> Marca esta opcion.</label> 
+			</div> 
+			<div class="checkbox"> 
+				<label> <input type="checkbox" id="op2" value="segunda"> O puedes marcar esta otra.</label> 
+			</div>
+			
+			<div class="text-success"> También los podemos poner los checkbox en línea con la clase checkbox-inline.	
+			</div>	
+			
+			<!-- Para ponerlo en horizontal todos los checkbox van en un div y con la clase checkbox-inline en el label-->
+			
+			<div class="checkbox"> 
+				<label class="checkbox-inline"> <input type="checkbox" id="deporte" value="uno"> Deporte.</label> 
+			    <label class="checkbox-inline"> <input type="checkbox" id="viaje" value="dos"> Viajar.</label> 
+				<label class="checkbox-inline"> <input type="checkbox" id="escribir" value="tres"> Escribir.</label> 
+			</div>
+			
+			<div><h3>Botones de radio</h3>
+			</div>
+			
+			<!-- cada elemento radio va en un div independiente, pero todos con el mismo nombre -->
+			<div class="radio"> 
+				<label> <input type="radio" name="radio1" id="radio1" value="Rojo" checked> Color rojo </label> 
+			</div> 
+			<div class="radio"> 
+				<label> <input type="radio" name="radio1" id="radio1" value="Verde"> Color verde </label>
+			</div>
+			<div class="radio"> 
+				<label> <input type="radio" name="radio1" id="radio1" value="Azul"> Color azul </label>
+			</div>
+			
+			<div class="text-success"> También los podemos poner los botones de radio en línea con la clase radio-inline.	
+			</div>
+			
+			<!-- Para ponerlo en horizontal todos los radios van en un div, todos con el mismo nombre y con la clase radio-inline en el label-->
+			<div class="radio"> 
+				<label class="radio-inline"> <input type="radio" name="radio2" id="radio2" value="Ford" checked> Mustang </label> 
+				<label class="radio-inline"> <input type="radio" name="radio2" id="radio2" value="Seat"> Seat 850 </label>
+				<label class="radio-inline"> <input type="radio" name="radio2" id="radio2" value="Renault"> Renault 8 </label>
+			</div>
+			
+			<div><h3>Elementos de selección.</h3>
+			</div>
+			
+			<div class="form-group"> 
+				<label for="name">Lista desplegable.</label> 
+				<select class="form-control"> 
+					<option>Madrid</option> 
+					<option>Barcelona</option> 
+					<option>Sevilla</option> 
+					<option>Valencia</option>  
+				</select> 
+			</div>
+			
+			<div class="form-group"> 
+				<label for="name">Lista de selección múltiple.</label> 
+				<select multiple class="form-control"> 
+					<option>Madrid</option> 
+					<option>Barcelona</option> 
+					<option>Sevilla</option> 
+					<option>Valencia</option>  
+				</select> 
+			</div>
+				
+			<button type="submit" class="btn btn-default">Submit</button> 
+		</form>
+		
+	</div>
+
+  </body>
+</html>

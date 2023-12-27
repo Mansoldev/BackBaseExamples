@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset='utf-8' />
+<title>Formulario html5</title>
+<body>
+<h1>Atributos</h1>
+<form name="formulario" method="POST" 
+action="http://www.institutos.es/para.php">
+
+<input type="email" name="correo" 
+placeholder="Correo electrónico..."
+size="30" maxlength="30" /><br />
+
+<input type="url" name="dir" 
+placeholder="Tu página web..."
+size="40" maxlength="40" /><br />
+
+<input type="search" name="buscar" 
+placeholder="Qué buscas...?"
+size="40" maxlength="40" /><br />
+
+<input type="number" name="cant1" 
+placeholder="Qué cantidad...?"
+size="15" maxlength="40" /><br />
+
+<input type="number" name="cant2" 
+placeholder="Qué cantidad...?"
+size="15" maxlength="40" min="20" max="50"/><br />
+
+<input type="number" name="cant3" 
+placeholder="Qué cantidad...?"
+size="15" maxlength="40" min="20" max="50" step="5" /><br />
+
+20<input type="range" name="cant4" 
+min="20" max="50" step="5" />50<br />
+
+<input type="Text" name="colores" list="color" />
+	<datalist id="color">
+		<option>Blanco</option>
+		<option>Negro</option>
+		<option>Rojo</option>
+		<option>Verde</option>
+	</datalist>
+
+<input type="submit" name="boton" value="Enviar" />
+<input type="reset" name="boton" value="Limpiar" />
+
+
+</form>
+</body>
+</html>

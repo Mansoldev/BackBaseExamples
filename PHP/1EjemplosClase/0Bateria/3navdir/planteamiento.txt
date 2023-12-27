@@ -1,0 +1,7 @@
+Es un archivo php que permite navegar entre los directorios del disco C:
+muestra en tabla navdir.php:
+Nombre#DirectorioOfichero(al pulsar en directorio navegas)#Tipo#Tamaño#Ultimo Acceso.
+
+Cuando pinchas en un directorio, le escaneas, con otras sacas las estadisticas y lo muestras.
+FUNCIONES: Scandir(), Chdir(), FileType(), fileSize(), fileatime().
+stat(), fstat() [uno pasa la ruta y el otro el manipulador.]

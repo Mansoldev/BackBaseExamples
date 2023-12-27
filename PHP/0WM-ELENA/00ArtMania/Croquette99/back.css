@@ -1,0 +1,20 @@
+/* CLASES PARA LOGIN Y OLVIDO */
+/*.fondo		{background-color:#C897C0;}*/
+.fondo		{background-color:#C8ADD9;}
+.colorlogin	{background-color:#FED0DC;margin-top:80px;}
+form		{padding-top:20px;padding-bottom:20px;}
+
+/* CLASES PARA ADMINISTRACION */
+.bienvenida	{margin:0;background-color:#FED0DC;
+			border-bottom:1px solid black;}
+.menu		{background-color:#FED0DC;
+			border-bottom:1px solid black;border-right:1px solid black;}
+.admin		{background-color:cyan;}
+article		{background-color:#FED0DC;}
+.entradas	{background-color:#FBFB96;}
+.tabla		{overflow:scroll;overflow-x: hidden;height:150px;}
+.tabla2		{overflow:scroll;overflow-x: hidden;height:320px;}
+.visible	{display:block;}
+.invisible	{display:none;}
+
+.resultado	{padding-top:50px;padding-bottom:50px;}

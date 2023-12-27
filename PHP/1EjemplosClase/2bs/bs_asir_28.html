@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- Para los dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejemplo 28. Barras de navegacion.</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap3/css/bootstrap.min.css" rel="stylesheet">
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="bootstrap3/js/jquery2.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap3/js/bootstrap.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+  </head>
+  <body>
+	<div class="container">
+		<div class="banner">
+			<h1>Barras de navegación.</h1>
+			<h3>Barra de navegacion responsive.</h3>
+		</div>
+		
+		<nav class="navbar navbar-default" role="navigation"> 
+			<div class="navbar-header"> 
+			    <!-- en data-target debe ir el id del menú (div) a mostrar -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse"> 
+					<span class="icon-bar"></span> <!-- son la líneas del menú cuando está colapsado -->
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span>
+				</button> 
+				<a class="navbar-brand" href="#">IES Ribera del Tajo.</a> <!-- Título del menú -->
+			</div> 
+			
+			<div class="collapse navbar-collapse" id="example-navbar-collapse"> 
+				<ul class="nav navbar-nav"> 
+					<li class="active"><a href="#"> ASIR </a></li> 
+					<li><a href="#">DAM</a></li> 
+					<li><a href="#">SMR</a></li> 
+					<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Elearning <b class="caret"></b> </a> 
+						<ul class="dropdown-menu"> 
+							<li><a href="#">DAMEL</a></li> 
+							<li><a href="#">SMREL</a></li> 							
+						</ul> 
+					</li> 
+				</ul> 
+			</div> 
+		</nav>
+		
+	</div>
+
+  </body>
+</html>

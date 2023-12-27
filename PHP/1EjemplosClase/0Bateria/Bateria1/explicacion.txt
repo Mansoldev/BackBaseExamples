@@ -1,0 +1,3 @@
+Cada ejercicio está numerado su php con su respectivo formulario html.
+No me funcionan los ciclos for, no se por qué, con lo cual todos los ciclos que utilizo son while.
+Algunos con el de la loteria no son visualmente bonitos, pero todos son funcionales.
