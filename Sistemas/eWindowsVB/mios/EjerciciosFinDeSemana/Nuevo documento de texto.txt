@@ -1,0 +1,3 @@
+'en una caja imput Array de nombres en un array de dos dimension con cada letra en ascii.
+'solo acepto de imput un valor numerico hasta 21, ni vacio, ni alfanumerico, ni superior a 21
+'Muestra el nombre de esa fila del array en ascii y debajo su traduccion

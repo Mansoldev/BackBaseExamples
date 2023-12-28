@@ -1,0 +1,15 @@
+[Version]
+Signature=$CHICAGO$
+SetupClass=BASE
+
+[DefaultInstall]
+AddReg=pegar.AddReg
+
+
+[pegar.AddReg]
+HKCU,Software\Microsoft\Windows\CurrentVersion\Policies\Explorer,RestrictCpl,0x00010001,0x00000001
+HKCU,Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictCpl,1,,Sistema
+HKCU,Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictCpl,2,,Firewall de Windows
+HKCU,Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictCpl,3,,Personalización
+
+;fin

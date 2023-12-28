@@ -1,0 +1,107 @@
+figlet -l -f bubble Hola
+http://furniman.blogspot.com.es/2012/02/anadir-un-directorio-al-path-del.html
+http://es.kioskea.net/faq/315-bash-la-variable-de-entorno-path
+http://yoporlinuxmato.blogspot.com.es/2013/06/anadir-un-directorio-la-variable-path.html
+http://blockdeubuntu.blogspot.com.es/2009/01/cmo-modificar-la-variable-path.html
+http://otroblogmas.com/modificar-path-ubuntu/
+
+24 Octubre
+	Pasword root --> AdminUser2014
+	Cron -->
+	
+	Crontab -->
+		Parametros:
+		-l: tareas que tenemos en nuestro crontab
+		-r -u: matariamos las tareas de 1 determinado usuario
+		-e: crea nuestro fichero crontab para empezar a trabajar en el
+		
+	export VISUAL="gedit" [para usar el editor gedit con crontab]
+	Donde esta situado Crontab -->
+		/var/spool/cron/crontabs
+	Variable MAILTO -->
+		si la ponemos "" no mandaria correos electrónicos
+	PATH -->
+		PATH=$PATH:/usr/bin
+	Para comprobar que el servicio de cron esta iniciado(activo) -->
+		service --status-all
+	Ver tareas asignadas al usuario -->
+		crontab -l
+	Borrar la tabla de tareas completa del usuario -->
+		crontab -r
+	Para advertir a crontab de que usarems medios graficos(cosas por pantalla) -->
+		(* * * * *) DISPLAY=:0  es decir al final de los parametros de dias y eso meterle el display
+
+28 Octubre 
+	Ejemplos CRONTAB
+	2) crontab1.sh
+	3) Modifica sus permisos: chmod a+x crontab1.sh
+	4) export PATH=/home/asir2user2014/Pruebas:$PATH
+	   metemos esa linea (menos export) a .bashrc
+	5) crontab -e
+		SHELL=/bin/bash
+		PATH=/home/asir2user2014/Pruebas:$PATH
+		MAILTO=""		
+		15 10 * * * /home/asir2user2014/Pruebas/crontab1.sh
+
+4 NOVIEMBRE
+	http://html.rincondelvago.com/algoritmos-y-programas.html
+	http://www.nachocabanes.com/c/curso/c_soluciones.php
+	http://php.net/manual/es/indexes.functions.php
+	http://www1.ceit.es/asignaturas/Informat1/ayudainf/aprendainf/Programar/Programar.pdf
+	http://www.frro.utn.edu.ar/repositorio/catedras/electrica/2_anio/fundamentos_informatica/apuntes/visual_basic/Variables%20Operadores.pdf
+	http://ovtoaster.com/shell-scripts-en-linux-variables-y-parametros/
+	http://nideaderedes.urlansoft.com/2009/05/15/introduccion-a-bash-pasar-argumentos-a-un-script-bash/
+	http://www.linux-es.org/node/31
+	http://www.ubuntu-es.org/node/71373#.VFieULODA8o
+	http://asir2.blogspot.com.es/p/scripts-bash-ejercicios.html
+	http://wiki.xtech.com.ar/index.php/Programaci%C3%B3n_de_scripts_en_Bash
+	http://persoal.citius.usc.es/tf.pena/ASR/Tema_2html/node20.html
+	http://www.scribd.com/doc/118432571/Guia-Shell
+	http://www.publispain.com/supertutoriales/soperativos/linux_unix/cursos/5/linuxcur.htm
+
+
+11 Noviembre
+	http://iie.fing.edu.uy/~vagonbar/unixbas/shprogsl.htm
+	http://blackshell.usebox.net/pub/shell/taller_sh/x214.html
+	http://html.rincondelvago.com/archivos-de-procesamiento-por-lotes.html
+	http://www.monografias.com/trabajos50/ejercicios-shell-script/ejercicios-shell-script2.shtml
+	http://www.linux-es.org/node/238
+	http://blog.desdelinux.net/bash-condiciones-if-then-else/
+	http://www.ubuntu-es.org/node/116917#.VGHVELODA8o
+	http://foro.elhacker.net/scripting/bash_script_equivalente_de_goto_en_batch_para_bash_solucionado-t309619.0.html
+	http://norfipc.com/comandos/usar-linea-comandos-windows-7-f-i.html
+	http://www.lawebdelprogramador.com/foros/Ms-Dos/1390517-Menu_con_opciones._Al_pulsar_enter_sale_del_menu_o_repite_ultima_accion.html
+	http://tpso1c2010.googlecode.com/svn-history/r18/trunk/Informe/src/Desarrollo.tex
+	http://html.rincondelvago.com/linux_9.html
+	http://148.204.64.201/paginas%20anexas/Programacion%20de%20sistemas/p11Shellscript.htm
+	http://recursostic.educacion.es/observatorio/web/fr/software/programacion/574-javier-martinez-avedillo
+	http://structio.sourceforge.net/guias/AA_Linux_colegio/scripts-basicos-para-bash.html	
+	http://www.taringa.net/posts/linux/8990024/Comandos-filtros-para-la-consola-Sort-Grep-find-tr-dd.html
+	http://enavas.blogspot.com.es/2008/04/el-shell-de-linux-comando-grep.html
+	http://www.oscargascon.es/bash-script-para-realizar-backup-simples-en-linux-en-otro-servidor
+
+  	Pedraz -->
+	useradd 
+		opcion -d (muestra las cosas que tenemos montadas)
+		opcion -m (crea automaticamente el directorio home)
+		opcion -p (poner password)
+		opcion -s (shell del usuario)
+
+		Ej:
+		user add "opciones" Password Usuario
+		user add -m -p PruebasAsir2 usupruebas
+		user add -m -s /bin/bash -g alumnos -p cobayAsir2 cobayaAsir2
+
+	userdel --> borrar usuarios/no elimina la entrada de directorio de usuario
+		ej: userdel usupruebas
+	  *Para borrar directorio (ls -la /home)
+		sudo rm -fr /home/usupruebas
+
+	usermod --> modificar usuarios	
+
+
+
+
+
+
+

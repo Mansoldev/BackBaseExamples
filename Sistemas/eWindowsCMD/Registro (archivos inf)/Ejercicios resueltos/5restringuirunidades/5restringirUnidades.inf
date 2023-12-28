@@ -1,0 +1,14 @@
+; Pedraz
+; 
+; Guión para restringir unidades
+
+[Version]
+Signature="$CHICAGO$"
+SetupClass=BASE
+
+[DefaultInstall]
+AddReg=Escritorio.AddReg
+
+[Escritorio.AddReg]
+HKCU,Software\Microsoft\Windows\CurrentVersion\Policies\Explorer,NoViewOnDrive,0x00010001,8
+;HKCU,Software\Microsoft\Windows\CurrentVersion\Policies\Explorer,NoDrives,0x00010001,8

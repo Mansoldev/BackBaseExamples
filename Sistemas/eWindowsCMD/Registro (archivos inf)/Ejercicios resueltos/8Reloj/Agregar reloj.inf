@@ -1,0 +1,12 @@
+[Version]
+Signature=&CHICAGO&
+SetupClass=BASE
+
+[DefaultInstall]
+delreg=borrar
+Addreg=crear
+
+[borrar]
+HKCU,Software\Microsoft\Windows\CurrentVersion\Policies\Explorer,HideClock
+[crear]
+HKCU,Software\Microsoft\Windows\CurrentVersion\Policies\Explorer,HideClock,0x00010001,0

@@ -1,0 +1,10 @@
+[Version]
+Signature=$CHICAGO$
+SetupClass=BASE
+
+[DefaultInstall]
+AddReg=pegar
+
+[pegar]
+HKCU,Software\Microsoft\Windows\CurrentVersion\Policies\Explorer,NoControlPanel,0x00010001,0x00000000
+

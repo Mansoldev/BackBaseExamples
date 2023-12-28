@@ -1,0 +1,16 @@
+; Pedraz
+;
+; Guión para activar las flechitas de los accesos directos de usuario
+;
+
+[Version]
+Signature="$CHICAGO$"
+SetupClass=BASE
+
+[DefaultInstall]
+AddReg=activar.AddReg
+
+
+[activar.AddReg]
+HKCR,lnkfile,IsShortcut,,""
+HKCR,piffile,IsShortcut,,""

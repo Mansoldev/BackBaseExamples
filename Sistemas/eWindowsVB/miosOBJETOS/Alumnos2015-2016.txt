@@ -1,0 +1,36 @@
+ALUMNOS MATRICULADOS EN ASSOO 2015-2016
+---------------------------------------
+
+
+Alumno                          Fecha de nacimiento
+---------------------------------------------------
+
+Amaral Fonseca, João Paulo	27/06/1994
+Antuña Rodríguez, Guillermo	11/09/1993
+Arroyo Rodríguez, Julián	16/01/1991
+Bodas Andrés, Adrián		07/10/1991
+Cabeza López, Alberto Damián	07/10/1987
+Cal Moreno, Iván de la		04/08/1989
+Cano Vázquez, Diego		30/04/1991
+Chico Vergel, Abraham		10/09/1988
+Díaz Núñez, Guillermo Jesús	16/05/1996
+Dimcheva, Desislava Ivanova	13/07/1991
+Fernández Alejo, Sara		18/12/1989
+Fernández Moreno, Juan Manuel	14/09/1966
+García Alarcón, Mario		07/12/1992
+Gómez López, Sergio		10/09/1994
+González Colilla, Rubén		27/11/1994
+Heredia de Marcos, Sergio	05/08/1993
+Hernández Fernández, David	04/02/1994
+Martín Carrillo, José Ignacio	07/05/1994
+Pazmiño Tacuri, Estefanía	17/11/1992
+Ramos Ollero, Alberto		31/03/1984
+Reina Dávila, Juan Manuel	28/04/1973
+Rivera Fernández, Sergio	03/04/1991
+Rodríguez Arriero, Mario	01/01/1992
+Romero Cavero, Zoila Edith	13/12/1983
+Sánchez del Castillo, Carolina	13/09/1981
+Sánchez Martin, Ángel Miguel	17/06/1979
+Sánchez Peña, Francisco Javier	31/03/1993
+Sánchez Pérez, Luis Miguel	24/09/1972
+Zaballos Marín, Patrick		03/07/1990

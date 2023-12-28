@@ -1,0 +1,49 @@
+AddressWidth :64
+Architecture :9
+Availability :3
+Caption :Intel64 Family 6 Model 23 Stepping 10
+ConfigManagerErrorCode :
+ConfigManagerUserConfig :
+CpuStatus :1
+CreationClassName :Win32_Processor
+CurrentClockSpeed :2642
+CurrentVoltage :13
+DataWidth :64
+Description :Intel64 Family 6 Model 23 Stepping 10
+DeviceID :CPU0
+ErrorCleared :
+ErrorDescription :
+ExtClock :1066
+Family :1
+InstallDate :
+L2CacheSize :2048
+L2CacheSpeed :
+L3CacheSize :0
+L3CacheSpeed :0
+LastErrorCode :
+Level :6
+LoadPercentage :2
+Manufacturer :GenuineIntel
+MaxClockSpeed :2936
+Name :Pentium(R) Dual-Core  CPU      E6500  @ 2.93GHz
+NumberOfCores :2
+NumberOfLogicalProcessors :2
+OtherFamilyDescription :
+PNPDeviceID :
+PowerManagementCapabilities :
+PowerManagementSupported :Falso
+ProcessorId :BFEBFBFF0001067A
+ProcessorType :3
+Revision :5898
+Role :CPU
+SocketDesignation :CPU 1
+Status :OK
+StatusInfo :3
+Stepping :
+SystemCreationClassName :Win32_ComputerSystem
+SystemName :B11_02
+UniqueId :
+UpgradeMethod :21
+Version :
+VoltageCaps :
+ :

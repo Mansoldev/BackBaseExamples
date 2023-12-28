@@ -1,0 +1,11 @@
+[Version]
+Signature=$CHICAGO$
+SetupClass=BASE
+
+
+[DefaultInstall]
+AddReg=pegar
+
+[pegar]
+HKCU,Software\Microsoft\Windows\CurrentVersion\Policies\system,DisableLockWorkstation,0x00010001,1
+HKCU,Software\Microsoft\Windows\CurrentVersion\Policies\system,NoColorChoice,0x00010001,1

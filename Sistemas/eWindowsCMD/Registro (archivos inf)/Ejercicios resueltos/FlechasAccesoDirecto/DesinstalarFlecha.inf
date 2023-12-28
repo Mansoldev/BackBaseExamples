@@ -1,0 +1,18 @@
+; Pedraz
+;
+; Guión para eliminar las flechitas de los accesos directos de usuario
+;
+
+[Version]
+Signature="$CHICAGO$"
+SetupClass=BASE
+
+[DefaultInstall]
+
+DelReg=eliminar.DelReg
+
+
+[eliminar.DelReg]
+
+HKCR,lnkfile,IsShortcut,,""
+HKCR,piffile,IsShortcut,,""

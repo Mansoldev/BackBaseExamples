@@ -1,0 +1,27 @@
+Set osh=WScript.CreateObject("WScript.Shell")
+osh.run "chrome.exe"
+wscript.sleep 2000
+osh.appactivate "Google Chrome"
+osh.sendkeys "https://mail.google.com"&chr(13)
+wscript.sleep 500
+osh.sendkeys chr(9)&chr(13)
+wscript.sleep 500
+osh.sendkeys "^(t)"
+wscript.sleep 500
+osh.sendkeys "http://esmanga.com/"&chr(13)
+wscript.sleep 500
+osh.sendkeys "^(t)"
+wscript.sleep 500
+osh.sendkeys "https://www.youtube.com/feed/subscriptions"&chr(13)
+wscript.sleep 500
+osh.sendkeys "^(t)"
+wscript.sleep 500
+osh.sendkeys "http://jkanime.net/"&chr(13)
+wscript.sleep 500
+osh.sendkeys "^(t)"
+wscript.sleep 500
+osh.sendkeys "http://academiadragonazul.foroactivo.com/"&chr(13)
+wscript.sleep 500
+osh.sendkeys "^(t)"
+wscript.sleep 500
+osh.sendkeys "https://www.facebook.com/"&chr(13)

@@ -1,0 +1,93 @@
+- BASE PARA FICHEROS .INF
+[Version]
+Signature=$CHICAGO$
+SetupClass=BASE
+
+[DefaultInstall]
+AddReg=pegar
+delreg=borrar
+
+[borrar]
+ruta(te la dan),nombredevariable (te la dan),tipodevariable (abajo, normalmente dword.),valor
+[pegar]
+
+
+- TIPOS DE INF:
+
+HKCR (o HKEY_CLASSES_ROOT):No usado.
+HKCU (o HKEY_CURRENT_USER): Usuario actual
+HKLM (o HKEY_LOCAL_MACHINE): Maquina entera
+HKU (o HKEY_USERS): No usado.
+
+tipodevariable: 0x00000000	<-- Cadena. -->
+         	      0x00010001	<-- Dword. -->
+                  0x00000001	<-- Binario. -->
+
+-RUTAS DEL REGISTRO:
+
+Protectores de pantalla: HKCU,Software\Microsoft\Windows\CurrentVersion\Screensavers\Bubbles
+				,MaterialGlass,0x00010001,0		<-- Transparencia. -->
+				,Radius,0x00010001,1121004800	<-- Tamaño. -->
+				,Radius,0x00010001,1131004800	
+				,ShowBubbles,0x00010001,1		<-- Fondo negro. -->
+				,TurbulenceSpeed,0x00010001,1	<-- Velocidad. -->
+				,ShowShadow,0x00010001,1		<-- Sombra. -->
+
+Fondo de escritorio: HKCU,Control Panel\Desktop
+				,Wallpaper,%10%"\Web\Wallpaper\fondoFormal.png"	<-- Fondo que quieras. -->
+				,WallpaperStyle,2			<-- 
+
+Reloj del sistema: ,Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
+				,HideClock,0x00010001,1		<-- Con valor 1 oculta, con 0 se ve. -->
+
+Cursor: HKCU,Control Panel\Cursors   
+				,Arrow,%10%"\Cursors\asi1.cur"	<-- Cambias el cursor por el que quieras. -->
+
+Habilitar el inicio de sesión automático: HKLM,SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
+				,DefaultUserName			<-- Nombre del usuario a iniciar. -->
+				,DefaultPassword			<-- Contraseña de ese usuario. -->
+				,AutoAdminLogon,1			<-- Para habilitarlo. -->
+
+Manipular usuarios remotos: HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
+				,LocalAccountTokenFilterPolicy,0x00010001,1<-- Podemos acceder a todas sus variables. -->
+
+Habilitar y ocultar recursos compartidos administrativos: ,Software\Microsoft\Windows\CurrentVersion\Policies\System 
+				,LocalAccountTokenFilterPolicy,0x00010001,1<-- Habilita eso -->
+					       ,SYSTEM\CurrentControlSet\Services\LanManServer\Parameters 
+				,AutoShareWks,0x00010001,0	<-- oculta eso. -->
+
+Permitir ejecutar solo programas autorizados: ,Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
+				,RestrictRun,1			<-- Solo las que esten dentro pueden ejecutarse. -->
+	,Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun <-- Aqui se ponen las variables que pueden ejecutarse-->
+
+Desactivar el acceso a linea de comandos: ,Software\Policies\Microsoft\Windows\System
+				,DisableCMD,1			<-- 1 lo desactiva. -->
+Impedir el acceso al panel de control: ,Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
+				NoControlPanel,1			<-- 1 lo impide. -->
+Impedir el acceso a las herramientas de modificación del registro: ,Software\Microsoft\Windows\CurrentVersion\Policies\System
+				,DisableRegistryTools,1		<-- 1 lo impide. -->
+Impedir cambio de protector de pantalla: HKCU,Software\Microsoft\Windows\CurrentVersion\Policies\System
+				,NoDispScrSavPage,1 		<-- 1 lo impide. -->
+				,DisableLockWorkstation,0x00000001	<-- impide cmd. -->
+				,NoColorChoice,0x00000001		<-- Impide cambiar el color. -->
+Impedir acceso las unidades del equipo: HKCU,Software\Microsoft\Windows\CurrentVersion\Policies\Explorer 
+				,NoViewOnDrive 			<-- Lo impide. -->
+				,NoDrives,67108863 (decimal)		<-- Impide verlos. -->
+					,3ffffff.			<-- A todas las unidades. Cada unidad potencia de 2: A=1 B=2-->
+					,3			<-- Unidades A y B-->
+					,7			<-- Unidades A,B y C-->
+					,f			<-- Uniddes A,B,C y D-->
+				,NoDriveTypeAutoRun,0x00000001	<-- No se cargan los autorun. -->
+				,NoFavoritesMenu,0x00000001	<-- No se ve menu de favoritos. -->
+				,NoFind,0x00000001		<-- No se ve el buscador. -->
+				,NoLogoff,0x00000001		<-- No se puede salir el usuario. -->
+				,NoRun,0x00000001		<-- No se ejecutan nada. -->
+				,NoSMConfigurePrograms,0x00000001	<-- No esta configurar progrmas en el menu inicio. -->
+				,NoSMMyDocs,0x00000001		<-- No se ve mis documentos. -->
+				,NoSMMyPictures,0x00000001	<-- No se ve mis imagenes. -->
+				,NoStartMenuMFUprogramsList,0x00000001<-- No se ven los programas. -->
+				,NoStartMenuMyGames,0x00000001	<-- No se mis juegos. -->
+				,NoStartMenuMyMusic,0x00000001	<-- No se ve mi musica. -->
+				,NoStartMenuNetworkPlaces,0x00000001<-- No se ven los otros equipos de la red. -->
+Instalar carpetas en el sistema: ,SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace
+				,{BB06C0E4-D293-4f75-8A90-CB05B6477EEE} <--Se crea esa carpeta en el escritorio. -->

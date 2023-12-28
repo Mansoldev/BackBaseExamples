@@ -1,0 +1,7 @@
+for /l %%a in (1,1,10000) do (
+  set terminado=!%%a!
+  if "%%a" EQU "terminar" goto fin
+)
+:fin
+echo %terminado%
+echo %terminar%

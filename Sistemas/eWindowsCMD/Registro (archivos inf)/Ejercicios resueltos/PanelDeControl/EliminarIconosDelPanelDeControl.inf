@@ -1,0 +1,15 @@
+[Version]
+Signature=$CHICAGO$
+SetupClass=BASE
+
+[DefaultInstall]
+AddReg=pegar.AddReg
+
+
+[pegar.AddReg]
+HKCU,Software\Microsoft\Windows\CurrentVersion\Policies\Explorer,DisallowCpl,0x00010001,0x00000001
+HKCU,Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowCpl,1,,Sistema
+HKCU,Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowCpl,2,,FireWall Windows
+HKCU,Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowCpl,3,,Personalización
+HKCU,Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowCpl,4,,Herramientas administrativas
+

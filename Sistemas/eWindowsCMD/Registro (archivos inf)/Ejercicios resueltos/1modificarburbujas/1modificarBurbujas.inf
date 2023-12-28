@@ -1,0 +1,13 @@
+[Version]
+Signature=$CHICAGO$
+SetupClass=BASE
+
+[DefaultInstall]
+AddReg=pegar
+
+
+[pegar]
+HKCU,Software\Microsoft\Windows\CurrentVersion\Screensavers\Bubbles,MaterialGlass,0x00010001,0
+HKCU,Software\Microsoft\Windows\CurrentVersion\Screensavers\Bubbles,Radius,0x00010001,1101304800
+HKCU,Software\Microsoft\Windows\CurrentVersion\Screensavers\Bubbles,ShowBubbles,0x00010001,1
+HKCU,Software\Microsoft\Windows\CurrentVersion\Screensavers\Bubbles,TurbulenceSpeed,0x00010001,1

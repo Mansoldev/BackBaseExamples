@@ -1,0 +1,13 @@
+@echo off
+doskey format=echo DESACTIVADO POR EL ADMINISTRADOR!!
+doskey ren=echo DESACTIVADO POR EL ADMINISTRADOR!!
+doskey rename=echo DESACTIVADO POR EL ADMINISTRADOR!!
+doskey rmdir=echo DESACTIVADO POR EL ADMINISTRADOR!!
+doskey md=echo DESACTIVADO POR EL ADMINISTRADOR!!
+doskey mkdir=echo DESACTIVADO POR EL ADMINISTRADOR!!
+doskey cdt=cd "c:\ASIR-1 20013"
+doskey cdiso=cd "c:\ASIR-1 20013\ISO"
+doskey cdfh=cd "c:\ASIR-1 20013\FH"
+doskey cdbs=cd "c:\ASIR-1 20013\BASES DE DATOS"
+doskey cdlm=cd "c:\ASIR-1 20013\LM"
+doskey cdrd=cd "c:\ASIR-1 20013\REDES"

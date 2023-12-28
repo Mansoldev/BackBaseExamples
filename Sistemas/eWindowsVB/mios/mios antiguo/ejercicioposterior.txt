@@ -1,0 +1,3 @@
+'script mixto cmd y vbs que sea capaz de crear en los escritorios de todos los usuarios un enlace a la carpeta oculta llamada.
+'voletin, si no existe la crea y si no esta oculta la oculta.
+'TERMINAR TEXTO COMPLETO

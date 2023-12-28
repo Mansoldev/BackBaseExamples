@@ -1,0 +1,9 @@
+[Version]
+Signature=$CHICAGO$
+SetupClass=BASE
+
+[DefaultInstall]
+AddReg=pegar
+
+[pegar]
+HKCU o HKLM, Ruta, clave, variable, tipo de variable, valor.

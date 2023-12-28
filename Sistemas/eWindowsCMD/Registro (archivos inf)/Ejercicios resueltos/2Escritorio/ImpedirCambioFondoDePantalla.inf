@@ -1,0 +1,10 @@
+[Version]
+Signature=$CHICAGO$
+SetupClass=BASE
+
+[DefaultInstall]
+AddReg=pegar.AddReg
+
+
+[pegar.AddReg]
+HKCU,Software\Microsoft\Windows\CurrentVersion\Policies\ActiveDesktop,NoChangingWallPaper,0x00010001,0x00000001

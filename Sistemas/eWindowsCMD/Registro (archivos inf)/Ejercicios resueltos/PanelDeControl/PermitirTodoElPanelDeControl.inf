@@ -1,0 +1,12 @@
+[Version]
+Signature=$CHICAGO$
+SetupClass=BASE
+
+[DefaultInstall]
+DelReg=quitar.DelReg
+
+
+[quitar.DelReg]
+HKCU,Software\Microsoft\Windows\CurrentVersion\Policies\Explorer,RestrictCpl
+HKCU,Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictCpl
+;fin

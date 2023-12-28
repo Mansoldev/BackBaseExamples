@@ -1,0 +1,126 @@
+1LOS IMPORTANTES MÁS USADOS
+pushd (ruta)						<-- Te manda a la ruta que le pongas -->
+popd								<-- Te devuelve a la ruta en la que te encontrabas antes del pushd -->
+2>nul								<-- Manda los errores de proceso a nul: ej: type yuyu.txt>index.txt 2>nul
+									Si no tuvieses fichero yuyu, no te saldria mensaje de error
+
+dir /s /-c *.msc|find /v "/"		<-- muestras archivos y carpetas de la ruta que escribas. *:todo lo que sigue, 
+										?:cualquier caracter de una posicion.
+										- /a=ocultos, sistema... 
+										- /ad=carpetas
+										- /a-d:solo ficheros. 
+										- /b=informacion justa
+										- /s=subcarpetas 
+										- /w=columnado 
+										- /al=enlaces simbolicos
+										IMPORTANTE LA BARRA PARA TRABAJAR EN RAIZ
+										|find: puedes filtrar cosas.
+											- /v: Filtra lo que no tiene
+											- /c: Te da el numero de palabras con esas caracteristicas.
+											- /i: contenido en "%variable%"-->
+
+where fichero a buscar				<-- /r c:\ busca por todo el sistema
+										- /t nos lo presenta con varias caracteristicas.
+
+set alumno=mario					<-- Introducir variables del sistema. 
+										- /a para numeros. resto= un numero% otro
+										- /p pregunta -->
+
+set %alumno:~p,c%					<-- p, caracter de inicio. c, a partir -->
+set alumno=%alumno:mario=sergio%	<-- Sustituye y si lo igualas a nada, lo eliminas.->
+
+timeout /t 10 /nobreak>nul
+choice /c p /d p /t 1 >nul			<-- Crea menus, usado como cronometro.
+										- /c opciones,
+										- /d opcion predeterminada 
+										- /t tiempo
+										- /m "mensaje"-->
+
+if "%X%" EQU "" ()					<-- EQU o ==: igual, "":vacio. (echo falta informacion&goto X): para dar mas instrucciones.
+										- NEQ: distinto de
+										- GTR:mayor que. 
+										- GEQ:mayor o igual
+										- LSS:menor que
+										- LEQ: menor o igual-->
+if not exist %x% goto X				<-- Si no existe ir a vacio. goto: vas a la parte del fichero donde tengas :X -->
+
+for /l %%a in (1,1,10000) do ()		<-- /l para usarlo con variables
+										- %%a es el que usa for. 
+										- in;primer caracter donde empiece, segundo lo que vaya cambiando y tercero donde termine. 
+										- do: hacer y ordenes-->
+									<-- *Dentro de los for, las variables que no sean %%a, en vez de %, va !*-->
+
+for /f 	"tokens=1,2,3 skip=5 delims=/.," %%a in ('type, dir /a')do  ()					
+									<-- /f para usarlo con documentos.
+										- tokens: que columna quedarnos, la 1 por defecto -:rango ,:varias.*:la linea entera.
+										- skip: linea de inicio. 
+										- ¡Delims= hasta donde llegan las palabras, se pueden usar varios.
+										- %%a es la variable, con varios tokens te dara varias a partir de la primera %%b %%c..., 
+										- in: en el comando o fichero que quires que te lo haga.
+										- do:hacer y ordenes. -->
+
+2IMPORTANTES ESPECIFICOS	
+		
+Wmic logicaldisk (get name^,access)	<-- Ver los dispositivos E/S del sistema, discos duros y pendrives. Unidades activas. Para conseguir 
+									solo una o varias lineas pones get como en el parentesis, separando lo que quieres con comas -->
+wmic /NODE:(02b12) /USER:(Administrador) /PASSWORD:(AdminUser2013) (logicaldisk/useraccount)
+									<-- Te permite entrar a informacion de esa maquina
+Macros: doskey cdt= comando			<-- Crea comandos que ejecuten lo que quieras. doskey macros para verlas.-->
+
+reg add "HKLM\software\Microsoft" 
+/v AutoRun /t REG_SZ /d "ruta"
+
+RUNAS /profile /user:Administrador 	<-- Ejecutar como el user que le pongas y entre comillas lo que quiero ejecutar,
+"cmd /c dir*.*&pause"				tambien puede ejecutar .exe-->
+
+netstat -r 							<--Nos da una especie de IP config más camino seguido.-->
+
+fsutil
+
+3OTROS COMANDOS UTILES:
+
+@echo off							<-- Para que no se muestren los comandos en la pantalla-->
+
+pause=nul							<-- Hace que se pause la consola y >nul no muestra el mensaje-->
+
+echo.								<-- Salto de linea -->
+
+set|more							<-- Pausa la consola cuando está llena para ver todo -->
+
+exit								<-- Salir de la consola -->
+
+title								<-- agrega un titulo a la consola -->
+
+del ruta /f							<-- borra el fichero especificado. -->
+
+color 4f							<-- modifica el color de la consola en hexadecimal: del 0 al f
+										- primero fondo 
+										- luego letra, hexadecimal: del 0 al f -->
+
+mode con cols=55 lines=5			<-- Modifica la consola, 
+										- cols=ancho 
+										- lines=alto -->
+
+; o : o ,							<-- Para comentarios -->
+
+start o notepad o winword o type	<-- start cualquier cosa, lo demas solo textos. -->
+
+setlocal enabledelayedexpansion		<-- Para que comprenda el script y lo haga paso por paso -->
+
+> o >>								<-- Envia los resultados a un fichero, es un comando absoluto, un mayor crea o 
+									reemplaza el fichero, dos, escribe delante de la información que ya haya.-->
+^										- ^para anular, los >, pause^>nul
+
+
+whoami
+time /t 
+date /t
+VARIABLES SET
+buscas set " (te presenta todas las variables del sistema)
+%username%
+%systemroot%%windir% (donde esté instalado windows ej: c:/windows)
+
+4COMANDOS OCULTOS, ASCII:
+- alt126:~
+- alt32:"
+- alt45:-
