@@ -1,0 +1,13 @@
+SET SERVEROUTPUT ON
+DECLARE
+NUM INT:=0;
+POT INT:=0;
+FIN INT:=0;
+BEGIN
+NUM:=&NUM ;
+POT:=&POT ;
+FIN:=NUM**POT;
+DBMS_OUTPUT.PUT_LINE (' - ');
+DBMS_OUTPUT.PUT_LINE ('El número introducido es '||NUM||' se ha elevado a '||POT||' y el resultado de la potencia es '||FIN);
+END;
+/

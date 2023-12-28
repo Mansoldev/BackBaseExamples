@@ -1,0 +1,15 @@
+CREATE OR REPLACE 
+PROCEDURE EstableceJefe(CodE IN Empleados.CodigoEmpleado%type, CodJ IN Empleados.CodigoJefe%type) AS
+E_NO_VALIDO EXCEPTION;
+BEGIN
+IF CodE=CodJ THEN
+	RAISE E_NO_VALIDO;
+END IF;
+UPDATE Empleados SET CodigoJefe=CodJ WHERE CodigoEmpleado=CodE;
+EXCEPTION
+WHEN E_NO_VALIDO THEN
+	DBMS_OUTPUT.PUT_LINE('UN EMPLEADO NO PUEDE SER SU PROPIO JEFE');
+WHEN OTHERS THEN
+	DBMS_OUTPUT.PUT_LINE('No es correcta la asignación');
+END;
+/

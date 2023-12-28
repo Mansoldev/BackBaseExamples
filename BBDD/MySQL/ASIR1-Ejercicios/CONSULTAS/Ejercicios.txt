@@ -1,0 +1,73 @@
+- NBA
+	EJ: SELECIONA DE LOS LAKERS LOS QUE TIENEN EL PESO MAXIMO
+ -select procedencia, max(peso*.4535) as kilos from jugadores where nombre_equipo='Lakers' group by procedencia;
+Ej2: SELECCIONA LOS QUE SON DEL ESTE
+-SUBCONSULTA select nombre from equipos where conferencia='east' 
+-select nombre from jugadores where nombre_equipo in/=(subconsulta)
+EJ3: SELECCIONA LOS QUE SON DE TORONTO
+-SUBCONSULTA select nombre from equipos where ciudad='Toronto' 
+-select nombre from jugadores where nombre_equipo = (subconsulta)
+	
+	
+	EL JUGADOR QUE MAS PESA
+	select nombre,peso(*.4535) 
+	as kilos, nombre_equipo 
+	from jugadores 
+	where peso=(select max(peso) from jugadores);
+
+	EQUIPOS QUE TIENEN JUGADORES QUE NO SON DE ESPAÑA
+	select nombre 
+	from equipos 
+	where not exists (select nombre from jugadores where equipos.nombre = jugadores.nombre_equipo and procedencia='spain');
+	select nombre 
+	from equipos 
+	where nombre not in (select nombre_equipo from jugadores where procedencia='spain');
+
+	CIUDAD DEL JUGADOR QUE MAS PESA
+	select ciudad 
+	from equipos 
+	where nombre = (select nombre_equipo from jugadores where peso = (select max(peso) from jugadores));
+
+	CIUDAD DEL JUGADOR MAS ALTO
+	select ciudad 
+	from equipos 
+	where nombre = (select nombre_equipo from jugadores where altura = (select max(altura) from jugadores));
+
+- JARDINERIA:
+	4.2
+	
+	
+	EJ3)CLIENTES EN CADA PAIS
+	select Pais, count(CodigoCliente/*) as nroclientes from Clientes group by Pais;
+	EJ4)MEDIA DE PAGOS 2007
+	select avg(cantidad) from pagos where [year(FechaPago)=2007/FechaPago like'2007%'];
+	4.3
+	4.7
+		1.SACAR LA CIUDAD Y EL TELEFONO DE LAS OFICINAS DE EEUU
+		select Ciudad, Telefono from Oficinas where Pais='EEUU'
+		2.SACAR EL NOMBRE LOS APELLIDOS Y EL EMAIL DE LOS EMPLEADOS A CARGO DE ALBERTO SORIA
+		select Nombre,concat(Apellido1,'',Apellido2) as Apellidos, Email from Empleados where CodigoJefe=(select CodigoEmpleado from Empleados where Nombre='Alberto');
+		3.SACAR EL CARGO, NOMBRE, APELLIDOS E EMAIL DEL JEFE DE LA EMPRESA
+		select Puesto, Nombre, concat(Apellido1,'', Apellido2), Email from Empleados where CodigoJefe is NULL; 
+		4.
+		
+	4.8 
+		3.select ,CodigoCliente,NombreCliente,LimiteCredito from clientes where LimiteCredito >(select sum(Cantidad) from Pagos where Pagos.CodigoCliente=Clientes.CodigoCliente);
+		4.select Nombre,CantidadEnStock from productos where CantidadEnStock=(select max(CantidadEnStock) from productos);
+		select Nombre,CantidadEnStock from productos where CantidadEnStock=(select min(CantidadEnStock) from productos);
+			select Nombre,CantidadEnStock from productos where CantidadEnStock=(select max(CantidadEnStock) from productos) or CantidadEnStock=(select max(CantidadEnStock) from productos);
+		
+Consultas multitabla
+	select concat(Nombre,' ',Apellido1,' ',Apellido2) as 'Nombre y Apellidos',
+	4.9
+		1.select NombreCliente,concat(Nombre,' ',Apellido1,' ',Apellido2) as 'Nombre de empleado',Oficinas.Ciudad
+		from Oficinas natural join Empleados inner Join Clientes
+			on Clientes.CodigoEmpleadoRepVentas=Empleados.CodigoEmpleado;
+		2.select NombreCliente,concat(Nombre,' ',Apellido1,' ',Apellido2) as 'Nombre de empleado',Oficinas.Ciudad
+			from Oficinas natural join Empleados inner join Clientes
+			on Clientes.CodigoEmpleadoRepVentas=Empleados.CodigoEmpleado
+			where not Pagos.Cantidad;
+		3.select concat(Nombre,' ',Apellido1,' ',Apellido2) as 'Nombre de empleado',concat(Nombre,' ',Apellido1,' ',Apellido2) as 'Nombre de Jefe' from Empleados
+			where 'Nombre de Jefe'=CodigoJefe;
+		
+	

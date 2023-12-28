@@ -1,0 +1,19 @@
+-- Pide un numero y te muestre la tabla de multiplicar de ese número hasta al 10
+SET SERVEROUTPUT ON
+
+DECLARE
+tabla int:=3;
+n int;
+
+BEGIN
+n:=&Introduce_numero;
+	WHILE n<=10 LOOP
+		
+		dbms_output.put_line(tabla||' x '||n||' = '||(tabla*n))	;
+		n:=n+1;
+		
+	END LOOP;
+
+END;
+/
+

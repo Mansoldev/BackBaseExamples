@@ -1,0 +1,11 @@
+SET SERVEROUTPUT ON
+DECLARE
+num INT;
+A INT:=10;
+B INT:=5;
+BEGIN
+ NUM:=A+B;
+ DBMS_OUTPUT.PUT_LINE(A||' + '||B||' = '||NUM);
+ 
+END;
+/

@@ -1,0 +1,8 @@
+SET SERVEROUTPUT ON
+DECLARE
+num INT:=10;
+BEGIN
+ 
+ DBMS_OUTPUT.PUT_LINE('HOLA CLASE SOY '||user||'Valor de num: '||num);
+END;
+/

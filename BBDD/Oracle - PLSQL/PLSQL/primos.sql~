@@ -1,0 +1,5 @@
+-- Muestra los 100 primeros numeros primos
+
+SET SERVEROUTPUT ON
+
+DECLARE

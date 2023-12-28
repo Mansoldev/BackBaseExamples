@@ -1,0 +1,20 @@
+SET SERVEROUTPUT ON
+DECLARE
+FACT INT:=1;
+NUM INT;
+BEGIN
+NUM:=&NUMERO;
+
+IF NUM>=0 AND NUM <=1 THEN
+	DBMS_OUTPUT.PUT_LINE('El factorial de: '||NUM||'Es = '||FACT);
+ELSIF NUM<100 AND NUM>1 THEN
+	FOR I IN 1..NUM LOOP
+		FACT:=FACT*I;
+	END LOOP;
+	DBMS_OUTPUT.PUT_LINE('El factorial de: '||NUM||' Es = '||FACT);	
+ELSE
+	DBMS_OUTPUT.PUT_LINE('El numero Introducido NO es valido');
+END IF;
+END;
+/
+

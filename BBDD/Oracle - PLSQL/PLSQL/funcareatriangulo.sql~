@@ -1,0 +1,7 @@
+-- Creamos una funcion que nos calcula el area de 1 triangulo
+CREATE OR REPLACE FUNCTION AREATRIANGULO(BASE IN FLOAT,ALTURA IN FLOAT) RETURN FLOAT
+IS
+BEGIN
+	RETURN(BASE*ALTURA/2);
+END;
+/

@@ -1,0 +1,20 @@
+-- Es el ejemplo pl40regfor.sql de manolo
+-- Utilizamos ahora 1 registro con 1 ciclo for
+SET SERVEROUTPUT ON
+DECLARE
+-- declaramos las variables con V_Reg cojemos los datos de la consulta (o cursor) c_cli
+TotCli INT:=0;
+Cursor v_cli IS SELECT CodigoCliente,NombreCliente,Telefono FROM Clientes;
+
+BEGIN
+-- Abrimos el cursor
+
+-- Metemos el for, que nos crea el registro
+	FOR V_Reg IN v_cli LOOP
+		-- Procesamos la informacion
+			DBMS_OUTPUT.PUT_LINE(V_Reg.CodigoCliente||' '||V_Reg.NombreCliente||' '||V_Reg.Telefono);
+			TotCli:=TotCli+1;
+	END LOOP;
+DBMS_OUTPUT.PUT_LINE('El total de Clientes es: '||TotCli);
+END;
+/

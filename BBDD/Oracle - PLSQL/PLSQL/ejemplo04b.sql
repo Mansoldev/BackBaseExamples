@@ -1,0 +1,15 @@
+-- Con los Bucles LOOP/WHILE y FOR PROGRAMA QUE IMPRIMA LOS 100 PRIMEROS NUMEROS
+SET SERVEROUTPUT ON
+
+
+
+BEGIN
+
+	FOR i IN 1 .. 100 LOOP
+
+		dbms_output.put_line(i);		
+		
+	END LOOP;
+
+END
+

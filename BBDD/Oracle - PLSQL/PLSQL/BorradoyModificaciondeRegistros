@@ -1,0 +1,38 @@
+	Ejercicios Paginas 200-5.1-5.2-5.4-5.5(el 5 no se hace)
+
+Creamos 1 base de Datos para Pruebas;
+	create database jardineria_copia;
+	use jardineria_copia;
+	source jardineria.sql;
+
+	Para el IVA es comun usar:  Precio * Cantidad + (1 + Iva/100)
+
+Pag 200 -->
+	5.1) Inserciones Actualizaciones y Borrados	
+		1) Inserta 1 oficina con sede en Fuenlabrada:
+			insert into Oficinas VALUES ('FUE-ES','Fuenlabrada','España','Madrid','28943','+34 91 6655060','Camino Molino, 37','');	
+		****** Nos hemos equivocado y hemos metido 1 registro mal:
+			insert into Oficinas VALUES ('FUE-ES','Fuenlabrada','España','Madrid','28943','34 91 6655060','Camino Molino, 37','');
+		****** Lo arreglamos asi:
+			update Oficinas set Telefono='+34 91 6655060' where Telefono='34 91 6655060';	
+
+		2) Inserta un Empleado para la Oficina de Fuenlabrada que sea Representante de Ventas:
+			insert into Empleados VALUES ('32','Sergio','Rivera','Fernandez','3516','ser123gio@hotmail.com','TAL-ES','30','Representante Ventas');
+	
+		3) Inserta un Cliente del Representante de Ventas Insertado en el punto 2:
+
+	5.4) Actualizaciones y borrados variados
+		Como no hay pedidos de 2010 y superiores modificamos:
+		update Pedidos set FechaPedido
+		1) Alter Table DetallePedidos ADD Column IVA Numeric(7,2);
+		   Update DetallePedidos SET Iva=16 WHERE CodigoPedido in (select CodigoPedido from Pedidos where FechaPedido<'2010-07-01');
+		2) Alter Table DetallePedidos add Column
+
+	5.5)
+		insert into oficinas  values ('LEG-ES','Leganes','España','Madrid','28400','916645251','C/El paso 6','Bajo A');
+		insert into Empleados
+		values (34,'Sergio','Rivera',Fernandez,'9998a','sergio@jardineria.com','LEG-ES',1,'Director Oficina');
+		insert into Empleados
+		values (35,'Andrea','Moreno',Gonzalez,'9998a','andrea@jardineria.com','LEG-ES',33,'Representante de Ventas');
+	
+
