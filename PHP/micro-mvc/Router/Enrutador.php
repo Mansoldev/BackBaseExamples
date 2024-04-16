@@ -24,10 +24,16 @@ class Enrutador {
         $path = $_SERVER['PATH_INFO'] ?? "/";
         $method = $_SERVER['REQUEST_METHOD'];
 
-        $fn = $method === 'GET' ? $this->get_routes[$path] : $this->post_routes[$path];
-        if(!$fn) header('Location: /404.php');
-
-        call_user_func($fn, $this);
+        $array_routes = $method === 'GET' ? $this->get_routes : $this->post_routes;
+        if(!isset($array_routes[$path])) 
+        {
+            $this->renderView('404.php');
+        }
+        else 
+        {
+            $fn = $array_routes[$path];
+            call_user_func($fn, $this);
+        }
     }
 
     public function renderView($page, $params = []) {
