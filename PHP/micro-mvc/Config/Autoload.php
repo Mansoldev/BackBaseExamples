@@ -1,5 +1,7 @@
 <?php
 
+namespace Config;
+
 //AutoIncluye las clases que incluyes con use, cargado en public/index.php
 class Autoload
 {

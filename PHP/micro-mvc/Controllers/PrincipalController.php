@@ -1,13 +1,13 @@
 <?php
 
-namespace Controladores;
+namespace Controllers;
 
-use Router\Enrutador;
+use Config\Router;
 // use Modelos\Usuarios;
 // use Modelos\Equipos;
 
 class PrincipalController {
-    public static function index(Enrutador $router) {
+    public function index(Router $router) {
         if($_SERVER['REQUEST_METHOD'] !== 'GET') $router->renderView('404.php');
 
         //Tratar la request - opcional
@@ -15,23 +15,17 @@ class PrincipalController {
         //Llamar al/los modelos para obtener datos
         // $Usuarios = new Usuarios($router->$db);
         // $usuario1 = $Usuarios->getUsuario(1);
-        $usuario1 = 'Celia';
+        $usuario1 = 'Tu nombre';
 
         // $Equipos = new Equipos($router->$db);
         // $equiposUsuario1 = $Equipos->getByUsuario(1);
-        $equiposUsuario1 = [1, 2, 3];
+        $numeros = [1, 2, 3];
         
         //Llamar a la vista pasandole los datos
         $router->renderView('index.php', [
             'user' => $usuario1,
-            'equipos' => $equiposUsuario1
+            'equipos' => $numeros
         ]);
-    }
-
-    public static function otro(Enrutador $router) {
-        if($_SERVER['REQUEST_METHOD'] !== 'GET') $router->renderView('404.php');
-
-        echo "otro";
     }
 }
 
