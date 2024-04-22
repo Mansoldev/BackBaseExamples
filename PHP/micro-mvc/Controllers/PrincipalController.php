@@ -21,6 +21,7 @@ class PrincipalController extends BaseController{
         $numeros = [1, 2, 3];
         
         //Llamar a la vista pasandole los datos
+        //$this->setLayout('a');
         $this->renderView('index.php', [
             'user' => $usuario1,
             'equipos' => $numeros

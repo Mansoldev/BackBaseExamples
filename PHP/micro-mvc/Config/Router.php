@@ -8,26 +8,26 @@ class Router {
     private array $put_routes = [];
     private array $delete_routes = [];
 
-    public function get(string $path, callable $fn): void {
+    public function get(string $path, array $fn): void {
         $this->get_routes[$path] = $fn;
     }
 
-    public function post(string $path, callable $fn): void {
+    public function post(string $path, array $fn): void {
         $this->post_routes[$path] = $fn;
     }
 
-    public function put(string $path, callable $fn): void {
+    public function put(string $path, array $fn): void {
         $this->put_routes[$path] = $fn;
     }
     
-    public function delete(string $path, callable $fn): void {
+    public function delete(string $path, array $fn): void {
         $this->delete_routes[$path] = $fn;
     }
 
     public function resolve(): void {
         $path = $_SERVER['PATH_INFO'] ?? "/";
         $httpAction = $_SERVER['REQUEST_METHOD'];
-        $array_routes = getURLActionRoutes($httpAction);
+        $array_routes = $this->getURLActionRoutes($httpAction);
         if(!isset($array_routes[$path])) {
             throw new \Exception("Ruta no encontrada: {$path}");
         }
