@@ -11,7 +11,7 @@ class Autoload
             $file = str_replace('\\', DIRECTORY_SEPARATOR, $class).'.php';
             $filepath = __ROOT_DIR__.DIRECTORY_SEPARATOR.$file;
             if (!file_exists($filepath)) {
-                throw new \Exception("La clase {$class} no se encontró en {$filepath}");
+                throw new \Exception("La clase '{$class}' no se encontró en '{$filepath}'");
             }
             require $filepath;
         });

@@ -3,31 +3,55 @@
 namespace Config;
 
 class Router {
-    public $get_routes;
-    public $post_routes;
+    private array $get_routes = [];
+    private array $post_routes = [];
+    private array $put_routes = [];
+    private array $delete_routes = [];
 
-    public function get($path, $fn) {
+    public function get(string $path, callable $fn): void {
         $this->get_routes[$path] = $fn;
     }
 
-    public function post($path, $fn) {
+    public function post(string $path, callable $fn): void {
         $this->post_routes[$path] = $fn;
     }
 
-    public function resolve() {
+    public function put(string $path, callable $fn): void {
+        $this->put_routes[$path] = $fn;
+    }
+    
+    public function delete(string $path, callable $fn): void {
+        $this->delete_routes[$path] = $fn;
+    }
+
+    public function resolve(): void {
         $path = $_SERVER['PATH_INFO'] ?? "/";
-        $method = $_SERVER['REQUEST_METHOD'];
-
-        $array_routes = $method === 'GET' ? $this->get_routes : $this->post_routes;
+        $httpAction = $_SERVER['REQUEST_METHOD'];
+        $array_routes = getURLActionRoutes($httpAction);
         if(!isset($array_routes[$path])) {
-            $this->renderView('404.php');
-        } else {
-            $fn = $array_routes[$path];
-            $class = $fn[0];
-            $methodName = $fn[1];
+            throw new \Exception("Ruta no encontrada: {$path}");
+        }
 
-            $instance = new $class();
-            call_user_func([$instance, $methodName]);
+        $fn = $array_routes[$path];
+        $class = $fn[0];
+        $methodName = $fn[1];
+
+        $instance = new $class();
+        call_user_func([$instance, $methodName]);
+    }
+
+    private function getURLActionRoutes(string $httpAction) {
+        switch ($httpAction) {
+            case 'GET':
+                return $this->get_routes;
+            case 'POST':
+                return $this->post_routes;
+            case 'PUT':
+                return $this->put_routes;
+            case 'DELETE':
+                return $this->delete_routes;
+            default:
+                throw new \Exception("Método HTTP no soportado: {$httpAction}");
         }
     }
 }
