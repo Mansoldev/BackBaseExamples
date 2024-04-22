@@ -1,5 +1,7 @@
 <?php
 
+//phpinfo();die;
+
 //Añadimos el Autoload
 define('__ROOT__', dirname(__FILE__));
 require_once(__ROOT__ . DIRECTORY_SEPARATOR . 'Config'. DIRECTORY_SEPARATOR .'Autoload.php');

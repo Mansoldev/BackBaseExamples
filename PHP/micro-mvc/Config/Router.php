@@ -2,15 +2,9 @@
 
 namespace Config;
 
-//Lee la URL y carga el controlador y el método definido en esa ruta en el public/index.php
 class Router {
-    public $db;
     public $get_routes;
     public $post_routes;
-
-    public function __construct() {
-        //this->db = new DataBase();
-    }
 
     public function get($path, $fn) {
         $this->get_routes[$path] = $fn;
@@ -33,19 +27,8 @@ class Router {
             $methodName = $fn[1];
 
             $instance = new $class();
-            call_user_func([$instance, $methodName], $this);
+            call_user_func([$instance, $methodName]);
         }
-    }
-
-    public function renderView($page, $params = []) {
-        foreach ($params as $param => $value) {
-            $$param = $value;
-        }
-
-        ob_start();
-        include_once(__ROOT__.DIRECTORY_SEPARATOR."public".DIRECTORY_SEPARATOR."views".DIRECTORY_SEPARATOR.$page);
-        $content = ob_get_clean();
-        include_once(__ROOT__.DIRECTORY_SEPARATOR."public".DIRECTORY_SEPARATOR."views".DIRECTORY_SEPARATOR."layouts".DIRECTORY_SEPARATOR."mainLayout.php");
     }
 }
 

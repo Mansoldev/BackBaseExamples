@@ -3,12 +3,11 @@
 namespace Controllers;
 
 use Config\Router;
-// use Modelos\Usuarios;
-// use Modelos\Equipos;
+use Controllers\BaseController;
 
-class PrincipalController {
-    public function index(Router $router) {
-        if($_SERVER['REQUEST_METHOD'] !== 'GET') $router->renderView('404.php');
+class PrincipalController extends BaseController{
+    public function index() {
+        if($_SERVER['REQUEST_METHOD'] !== 'GET') $this->renderView('404.php');
 
         //Tratar la request - opcional
 
@@ -22,7 +21,7 @@ class PrincipalController {
         $numeros = [1, 2, 3];
         
         //Llamar a la vista pasandole los datos
-        $router->renderView('index.php', [
+        $this->renderView('index.php', [
             'user' => $usuario1,
             'equipos' => $numeros
         ]);
