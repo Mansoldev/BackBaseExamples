@@ -2,6 +2,8 @@
 
 namespace Config;
 
+use Models\Request;
+
 class Router {
     private array $get_routes = [];
     private array $post_routes = [];
@@ -36,8 +38,9 @@ class Router {
         $class = $fn[0];
         $methodName = $fn[1];
 
+        $request = new Request($_GET, $_POST);
         $instance = new $class();
-        call_user_func([$instance, $methodName]);
+        call_user_func([$instance, $methodName], $request);
     }
 
     private function getURLActionRoutes(string $httpAction) {

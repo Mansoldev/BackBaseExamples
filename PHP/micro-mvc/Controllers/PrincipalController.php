@@ -4,12 +4,14 @@ namespace Controllers;
 
 use Config\Router;
 use Controllers\BaseController;
+use Models\Request;
 
 class PrincipalController extends BaseController{
-    public function index() {
+    public function index(Request $request) {
         if($_SERVER['REQUEST_METHOD'] !== 'GET') $this->renderView('404.php');
 
         //Tratar la request - opcional
+        //print_r($request);die;
 
         //Llamar al/los modelos para obtener datos
         // $Usuarios = new Usuarios($router->$db);
