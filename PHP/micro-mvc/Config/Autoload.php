@@ -9,13 +9,11 @@ class Autoload
     {
         spl_autoload_register(function ($class) {
             $file = str_replace('\\', DIRECTORY_SEPARATOR, $class).'.php';
-            $filepath = __ROOT__.DIRECTORY_SEPARATOR.$file;
-            //echo $filepath;
-            if (file_exists($filepath)) {
-                require $filepath;
-                return true;
+            $filepath = __ROOT_DIR__.DIRECTORY_SEPARATOR.$file;
+            if (!file_exists($filepath)) {
+                throw new \Exception("La clase {$class} no se encontró en {$filepath}");
             }
-            return false;
+            require $filepath;
         });
     }
 }

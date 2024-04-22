@@ -9,9 +9,9 @@ class BaseController {
         }
 
         ob_start();
-        include_once(__ROOT__.DIRECTORY_SEPARATOR."public".DIRECTORY_SEPARATOR."views".DIRECTORY_SEPARATOR.$page);
+        include_once(__VIEWS_DIR__.$page);
         $content = ob_get_clean();
-        include_once(__ROOT__.DIRECTORY_SEPARATOR."public".DIRECTORY_SEPARATOR."views".DIRECTORY_SEPARATOR."layouts".DIRECTORY_SEPARATOR."mainLayout.php");
+        include_once(__LAYOUTS_DIR__."mainLayout.php");
     }
 }
 

@@ -2,14 +2,15 @@
 
 //phpinfo();die;
 
-//Añadimos el Autoload
-define('__ROOT__', dirname(__FILE__));
-require_once(__ROOT__ . DIRECTORY_SEPARATOR . 'Config'. DIRECTORY_SEPARATOR .'Autoload.php');
-Config\Autoload::register();
-
 //Añadimos los espacios de nombres a utilizar
+use Config\Globals;
 use Config\Router;
 use Controllers\PrincipalController;
+
+//Añadimos el Autoload
+require_once('Config'. DIRECTORY_SEPARATOR .'Globals.php');
+require_once(__CONFIG_DIR__ .'Autoload.php');
+Config\Autoload::register();
 
 //Cargamos las rutas que vamos a usar
 $router = new Router();
