@@ -16,7 +16,6 @@ Config\Autoload::register();
 $router = new Router();
 $router->get('/', [PrincipalController::class, 'index']);
 $router->get('/tienda', [PrincipalController::class, 'tienda']);
-$router->get('/back/tienda', [PrincipalController::class, 'tienda']);
 $router->resolve();
 
 ?>

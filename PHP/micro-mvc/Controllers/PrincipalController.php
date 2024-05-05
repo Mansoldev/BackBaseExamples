@@ -6,7 +6,9 @@ use Config\Router;
 use Controllers\BaseController;
 use Models\Request;
 
-class PrincipalController extends BaseController{
+class PrincipalController extends BaseController {
+    //protected string $layout = 'otroLayout.php';
+
     public function index(Request $request) {
         if($_SERVER['REQUEST_METHOD'] !== 'GET') $this->renderView('404.php');
 
