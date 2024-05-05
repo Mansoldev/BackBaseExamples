@@ -29,6 +29,7 @@ class Router {
     public function resolve(): void {
         $path = $_SERVER['PATH_INFO'] ?? "/";
         $httpAction = $_SERVER['REQUEST_METHOD'];
+        //var_dump($this->get_routes, $path);die;
         $array_routes = $this->getURLActionRoutes($httpAction);
         if(!isset($array_routes[$path])) {
             throw new \Exception("Ruta no encontrada: {$path}");

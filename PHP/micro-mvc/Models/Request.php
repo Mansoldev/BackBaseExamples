@@ -3,20 +3,14 @@
 namespace Models;
 
 class Request {
-    private $get;
-    private $post;
+    private array $params = [];
 
     public function __construct(array $get, array $post) {
-        $this->get = $get;
-        $this->post = $post;
+        $this->params = array_merge($get, $post);
     }
 
     public function get($key, $default = null) {
-        return $this->get[$key] ?? $default;
-    }
-
-    public function post($key, $default = null) {
-        return $this->post[$key] ?? $default;
+        return $this->params[$key] ?? $default;
     }
 }
 

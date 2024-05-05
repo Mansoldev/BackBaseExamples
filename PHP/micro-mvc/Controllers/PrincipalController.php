@@ -11,7 +11,8 @@ class PrincipalController extends BaseController{
         if($_SERVER['REQUEST_METHOD'] !== 'GET') $this->renderView('404.php');
 
         //Tratar la request - opcional
-        //print_r($request);die;
+        // $email = $request->get('email');
+        // $password = $request->post('password');
 
         //Llamar al/los modelos para obtener datos
         // $Usuarios = new Usuarios($router->$db);
@@ -28,6 +29,11 @@ class PrincipalController extends BaseController{
             'user' => $usuario1,
             'equipos' => $numeros
         ]);
+    }
+
+    public function tienda(Request $request) {
+        if($_SERVER['REQUEST_METHOD'] !== 'GET') $this->renderView('404.php');
+        print_r($request);die;
     }
 }
 
