@@ -2,6 +2,9 @@
 
 namespace Models;
 
+/*
+ * Clase de datos que debe tener los parametros obtenidos de la request HTTP para que puedan usarlos los controladores
+ */
 class Request {
     private array $params = [];
 

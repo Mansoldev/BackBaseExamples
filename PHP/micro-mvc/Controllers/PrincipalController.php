@@ -10,8 +10,6 @@ class PrincipalController extends BaseController {
     //protected string $layout = 'otroLayout.php';
 
     public function index(Request $request) {
-        if($_SERVER['REQUEST_METHOD'] !== 'GET') $this->renderView('404.php');
-
         //Tratar la request - opcional
         // $email = $request->get('email');
         // $password = $request->post('password');

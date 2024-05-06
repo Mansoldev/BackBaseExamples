@@ -2,14 +2,31 @@
 
 namespace Controllers;
 
+/*
+ * Clase de la que deben extender el resto de controladores que se encarga de ser el motor de vistas en general:
+ * - Setea el layout a utilizar
+ * - Setea los parametros que le mandas a la vista
+ * - Renderiza una vista concreta dentro de un layout o sin él según se especifique
+ */
 class BaseController {
-    protected string $layout = 'mainLayout.php'; // Layout predeterminado
+    /**
+     * @var string Nombre del layout por defecto, cada controlador puede sobreescribirla
+     */
+    protected string $layout = 'mainLayout.php';
+    /**
+     * @var string Ruta física del layout validada por el método setLayout() para cargar el layout en el método renderView
+     */
     private string $layoutWithPath = '';
 
+    /** CONSTRUCTOR: Setea el layout definido en $layout */
     public function __construct() {
         $this->setLayout($this->layout);
     }
 
+    /**
+     * Comprueba que el layout pasado por parametro existe y guarda la ruta al archivo en la propiedad $layoutWithPath para renderizarlo en el método renderView
+     * @param string $layout nombre completo del archivo de layout a cargar
+     */
     public function setLayout(string $layout) {
         $this->layoutWithPath = __LAYOUTS_DIR__ . $layout;
         if (!is_file($this->layoutWithPath) || !is_readable($this->layoutWithPath)) {
@@ -18,16 +35,16 @@ class BaseController {
         $this->layout = $layout;
     }
 
+    /**
+     * Crea las variables pasadas para que puedan usarla las vistas y renderiza esta junto con su layout si es necesario
+     * @param string $page nombre completo del archivo de vista a cargar
+     * @param array $params opcional, parametros a usar en la vista
+     * @param bool $useLayout opcional, define si se usa layout en esa vista
+     */
     public function renderView(string $page, array $params = [], bool $useLayout = true) {
-        foreach ($params as $param => $value) {
-            $$param = $value;
-        }
+        $this->setParams($params);
 
-        // Verificar si el archivo de vista existe y es legible
-        $viewFile = __VIEWS_DIR__ . $page;
-        if (!is_file($viewFile) || !is_readable($viewFile)) {
-            throw new \Exception("El archivo de vista '{$page}' no existe o no es legible en el directorio de las vistas " . __VIEWS_DIR__);
-        }
+        $pageWithPath = $this->verifyView($page);
 
         ob_start();
         include_once($viewFile);
@@ -38,6 +55,28 @@ class BaseController {
         } else {
             echo $content;
         }
+    }
+
+    /**
+     * Convierte los parametros de los controladores en variables utilizables para una vista
+     * @var array Parametros proporcionados por los controladores para ser usados en las vistas
+     */
+    private function setParams(array $params) {
+        foreach ($params as $param => $value) {
+            $$param = $value;
+        }
+    }
+
+    /**
+     * Verifica que el archivo de vista existe y devuelve la ruta completa para ser renderizado
+     * @var string fichero o ruta con el fichero de la vista, contando desde el directorio de vistas __VIEWS_DIR__
+     */
+    private function verifyView(string $view) {
+        $viewWithPath = __VIEWS_DIR__ . $view;
+        if (!is_file($viewWithPath) || !is_readable($viewWithPath)) {
+            throw new \Exception("El archivo de vista '{$view}' no existe o no es legible en el directorio de las vistas " . __VIEWS_DIR__);
+        }
+        return $viewWithPath;
     }
 }
 
