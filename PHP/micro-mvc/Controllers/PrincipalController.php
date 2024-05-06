@@ -33,7 +33,7 @@ class PrincipalController extends BaseController {
 
     public function tienda(Request $request) {
         if($_SERVER['REQUEST_METHOD'] !== 'GET') $this->renderView('404.php');
-        print_r($request);die;
+        print_r($request->get('saludo'));die;
     }
 }
 

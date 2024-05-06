@@ -42,28 +42,19 @@ class BaseController {
      * @param bool $useLayout opcional, define si se usa layout en esa vista
      */
     public function renderView(string $page, array $params = [], bool $useLayout = true) {
-        $this->setParams($params);
+        // Extraer en variables el array asociativo $params
+        extract($params);
 
         $pageWithPath = $this->verifyView($page);
 
         ob_start();
-        include_once($viewFile);
+        include_once($pageWithPath);
         $content = ob_get_clean();
         
         if ($useLayout) {
             include_once($this->layoutWithPath);
         } else {
             echo $content;
-        }
-    }
-
-    /**
-     * Convierte los parametros de los controladores en variables utilizables para una vista
-     * @var array Parametros proporcionados por los controladores para ser usados en las vistas
-     */
-    private function setParams(array $params) {
-        foreach ($params as $param => $value) {
-            $$param = $value;
         }
     }
 
