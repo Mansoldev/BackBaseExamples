@@ -1,0 +1,36 @@
+array(32) { 
+    ["DOCUMENT_ROOT"]=> string(62) "C:\Users\Mario\Documents\GITHUB\BackBaseExamples\PHP\micro-mvc" 
+    ["REMOTE_ADDR"]=> string(3) "::1" 
+    ["REMOTE_PORT"]=> string(5) "64968" 
+    ["SERVER_SOFTWARE"]=> string(30) "PHP/8.3.6 (Development Server)" 
+    ["SERVER_PROTOCOL"]=> string(8) "HTTP/1.1" 
+    ["SERVER_NAME"]=> string(9) "localhost" 
+    ["SERVER_PORT"]=> string(4) "8080" 
+    ["REQUEST_URI"]=> string(13) "/?saludo=hola" 
+    ["REQUEST_METHOD"]=> string(3) "GET" 
+    ["SCRIPT_NAME"]=> string(10) "/index.php" 
+    ["SCRIPT_FILENAME"]=> string(72) "C:\Users\Mario\Documents\GITHUB\BackBaseExamples\PHP\micro-mvc\index.php" 
+    ["PHP_SELF"]=> string(10) "/index.php" 
+    ["QUERY_STRING"]=> string(11) "saludo=hola" 
+    ["HTTP_HOST"]=> string(14) "localhost:8080" 
+    ["HTTP_CONNECTION"]=> string(10) "keep-alive" 
+    ["HTTP_CACHE_CONTROL"]=> string(9) "max-age=0" 
+    ["HTTP_SEC_CH_UA"]=> string(65) ""Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"" 
+    ["HTTP_SEC_CH_UA_MOBILE"]=> string(2) "?0" 
+    ["HTTP_SEC_CH_UA_PLATFORM"]=> string(9) ""Windows"" 
+    ["HTTP_UPGRADE_INSECURE_REQUESTS"]=> string(1) "1" 
+    ["HTTP_USER_AGENT"]=> string(111) "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" 
+    ["HTTP_ACCEPT"]=> string(135) "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7" 
+    ["HTTP_SEC_FETCH_SITE"]=> string(4) "none" 
+    ["HTTP_SEC_FETCH_MODE"]=> string(8) "navigate" 
+    ["HTTP_SEC_FETCH_USER"]=> string(2) "?1" 
+    ["HTTP_SEC_FETCH_DEST"]=> string(8) "document" 
+    ["HTTP_ACCEPT_ENCODING"]=> string(23) "gzip, deflate, br, zstd" 
+    ["HTTP_ACCEPT_LANGUAGE"]=> string(14) "es-ES,es;q=0.9" 
+    ["REQUEST_TIME_FLOAT"]=> float(1715194064.139763) 
+    ["REQUEST_TIME"]=> int(1715194064) 
+    ["argv"]=> array(1) { 
+        [0]=> string(11) "saludo=hola" 
+    } 
+    ["argc"]=> int(1) 
+}
